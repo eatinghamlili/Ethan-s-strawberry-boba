@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1> Boba</h1>
+		<img src= https://myveganminimalist.com/wp-content/uploads/2022/04/Strawberry-Milk-Tea-Boba-11.jpg
+	</body>
+		<h2> Strawberry boba is good</h2>
+		<h2> Hola, Hello, Ni-hao
+	</body>
+		<h2> My name is Ethan and I like starberry boba</h2>
+		<h2> Click on button
+</html>
+<button onclick="changeImage()">Change Image</button>
+
+<script>
+	const images = [
+		"https://myveganminimalist.com/wp-content/uploads/2022/04/Strawberry-Milk-Tea-Boba-11.jpg",
+		"https://www.thesophisticatedcaveman.com/wp-content/uploads/2017/06/Strawberries-500x500.jpg.webp",
+		"https://entirelyelizabeth.com/wp-content/uploads/2023/01/IMG_7535.jpg.webp"
+	];
+	let current = 0;
+	function changeImage() {
+		current = (current + 1) % images.length;
+		document.querySelector("img").src = images[current];
+	}
+</script>
+
+
+<script>
+	document.addEventListener("click", function(e) {
+		const s = document.createElement("div");
+		s.textContent = "🍓";
+		s.style.position = "fixed";
+		s.style.left = e.clientX + "px";
+		s.style.top = e.clientY + "px";
+		s.style.fontSize = "30px";
+		s.style.pointerEvents = "none";
+		s.style.transition = "all 1s ease-out";
+		s.style.opacity = "1";
+		s.style.zIndex = "999";
+		document.body.appendChild(s);
+
+		setTimeout(() => {
+			s.style.top = e.clientY - 50 + "px";
+			s.style.opacity = "0";
+		}, 10);
+
+		setTimeout(() => s.remove(), 1575);
+	});
+</script>
