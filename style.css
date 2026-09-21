@@ -1,0 +1,14 @@
+body{
+	background-color: rgba(238, 149, 144, 0.727);
+	font-family: 'Courier New', Courier,
+	monospace;
+	color: darkgoldenrod
+}
+
+h1{
+	color: darkolivegreen
+}
+
+img{
+	height: 500px
+}
